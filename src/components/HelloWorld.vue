@@ -1,45 +1,92 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div>
+    <div class="image">
+      <div style="position: relative;">
+        <img :src="screenWidth > 500 ? require('@/assets/engagement.jpg') : require('@/assets/engagement_mobile.jpeg')" style="width: 100%;">
+      </div>
+    </div>
+    <div :class="screenWidth > 500 ? 'regRoot' : 'mobileRoot'">
+      <div class="styleme">
+        <div class="header" :class="screenWidth > 500 ? 'styleReg' : 'styleMobile'">
+          Bruiloft
+
+        </div>
+      </div>
+      <div class="styleme">
+        <div class="header" :class="screenWidth > 500 ? 'styleReg' : 'styleMobile'">
+          Taher & Fleur
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  name: 'Homepage',
+  data() {
+    return {
+      screenWidth: 0,
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.resizeScreen);
+      this.resizeScreen();
+    })
+  },
+  methods:{
+    resizeScreen() {
+      this.screenWidth = window.innerWidth;
+      console.log('Gluiperdt');
+    },
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.image {
+  width:100%;
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+* {
+  background: transparent;
+  z-index: 1;
+}
+.regRoot {
+  margin-top: 50px;
+}
+.mobileRoot {
+  margin-top: 10px;
+}
+.styleMobile {
+  font-size: 45px;
+  margin-top: 30px;
+  color: #F5F5DC;
+}
+.styleReg {
+  color:white;
+  margin-top: 30px;
+  font-size: 60px;
+}
+
+.styleme {
+  display:flex;
+  justify-content: center;
+}
+.header {
+  font-family: "Lucida Handwriting";
+  font-weight: 100;
+}
+
+.sub {
+  font-size: 30px;
+  font-family: "Courier";
+}
 h3 {
   margin: 40px 0 0;
 }
