@@ -9,7 +9,6 @@
       <div class="styleme">
         <div class="header" :class="screenWidth > 500 ? 'styleReg' : 'styleMobile'">
           Bruiloft
-
         </div>
       </div>
       <div class="styleme">
@@ -22,6 +21,9 @@
 </template>
 
 <script>
+
+import {db} from "@/main";
+import {addDoc, collection} from 'firebase/firestore'
 export default {
   name: 'Homepage',
   data() {
@@ -29,11 +31,25 @@ export default {
       screenWidth: 0,
     }
   },
-  mounted() {
+  async mounted() {
     this.$nextTick(() => {
       window.addEventListener('resize', this.resizeScreen);
       this.resizeScreen();
     })
+
+    // const response = await addDoc(collection(db, "antwoorden"), {
+    //   blijvenSlapen: true,
+    //   dieetWensen: 'Ik lust geen gras',
+    // })
+    // console.log(response);
+    // db.collection("antwoorden").add({
+    //   blijvenSlapen: true,
+    //   dieetWensen: "Ik lust geen gras",
+    // }).then((response) => {
+    //   console.log('yay', response);
+    // }).catch((error) => {
+    //   console.log('error', error);
+    // })
   },
   methods:{
     resizeScreen() {
