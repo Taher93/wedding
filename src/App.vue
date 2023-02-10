@@ -47,7 +47,7 @@ export default {
 <style>
 * {
   max-width:100%;
-  background: #F5F5DC;
+  background: transparent;
 }
 
 .styleRegular {
@@ -57,7 +57,7 @@ export default {
 .styleMobile {
   justify-content: end;
   font-size: 20px;
-  padding: 10px 15px !important;
+  padding: 2px 15px !important;
 }
 
 /*.list::-webkit-scrollbar {*/

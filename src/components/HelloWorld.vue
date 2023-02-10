@@ -54,7 +54,7 @@ export default {
   methods:{
     resizeScreen() {
       this.screenWidth = window.innerWidth;
-      console.log('Gluiperdt');
+      console.log('Gluiperd');
     },
   }
 }

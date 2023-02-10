@@ -12,7 +12,8 @@
     "bootstrap-vue": "^2.23.1",
     "firebase": "^9.16.0",
     "vue": "^2.6.14",
-    "vue-router": "^3.5.1"
+    "vue-router": "^3.5.1",
+    "@riophae/vue-treeselect": "^0.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-router": "~5.0.0",
