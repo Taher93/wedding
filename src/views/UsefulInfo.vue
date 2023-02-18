@@ -4,11 +4,23 @@
       <div style="position: relative;">
         <img :src="screenWidth > 500 ? require('@/assets/image00002.jpeg') : require('@/assets/image00002.jpeg')" style="width: 100%;">
       </div>
+      <div style="position: relative;" v-if="screenWidth < 500 || (screenWidth > 500 && diet && hotel)">
+        <img :src="screenWidth > 500 ? require('@/assets/image00001.jpeg') : require('@/assets/image00003.jpeg')" style="width: 100%;">
+      </div>
+      <div style="position: relative;" v-if="screenWidth < 500">
+        <img :src="screenWidth > 500 ? require('@/assets/image00001.jpeg') : require('@/assets/image00004.jpeg')" style="width: 100%;">
+      </div>
+      <div style="position: relative;" v-if="screenWidth < 500 && hotel">
+        <img :src="screenWidth > 500 ? require('@/assets/image00001.jpeg') : require('@/assets/image00004.jpeg')" style="width: 100%;">
+      </div>
     </div>
     <div class="container mt-4">
-      <div class="row">
-        <div :class="screenWidth > 500 ? 'col-6 offset-3' : 'col-12'">
-          <div>
+      <div class="row m-0">
+        <div :class="screenWidth > 500 ? 'col-6 offset-3' : 'col-12 p-0'">
+          <div class="mt-2">
+            <label style="font-size:24px;" class="d-flex justify-content-center">Handige informatie</label>
+          </div>
+          <div class="mt-2">
             Hayet, ons (schoon)zusje, is ceremoniemeester en is druk bezig met de voorbereidingen.
           </div>
           <div>
@@ -18,14 +30,14 @@
             Zouden jullie zo vriendelijk willen zijn om het onderstaande formulier in te vullen?
           </div>
           <div>
-            Mocht je nog verdere vragen hebben dan kun je die mailen naar <a href="mailto:ceremoniemeester@huwelijktaherenfleur.nl">
+            Mocht je nog verdere vragen hebben of wilt speechen dan kun je die mailen naar <a href="mailto:ceremoniemeester@huwelijktaherenfleur.nl">
             ceremoniemeester@huwelijktaherenfleur.nl</a>
           </div>
-          <div class="d-flex bg-transparent" style="justify-content: space-between; margin: 20px 40px;">
-            <button type="button" class="btn btn-primary" @click="setDiet(true)">
+          <div class="d-flex bg-transparent" style="justify-content: space-between;" :style="screenWidth > 500 ? 'margin: 20px 0;' : 'margin: 10px 0;'">
+            <button type="button" class="btn" @click="setDiet(true)" :style="diet === true ? 'background: #42b983;' : ''" :class="screenWidth > 500 ? 'buttonStyleRegular' : 'buttonStyleMobile'">
               Ik heb dieetwensen
             </button>
-            <button type="button" class="btn btn-primary" @click="setDiet(false)">
+            <button type="button" class="btn" @click="setDiet(false)" :style="diet === false ? 'background: #42b983;' : ''" :class="screenWidth > 500 ? 'buttonStyleRegular' : 'buttonStyleMobile'">
               Ik heb geen dieetwensen
             </button>
           </div>
@@ -35,7 +47,7 @@
             </label>
             <Treeselect class="bg-transparent" style="height: 40px;" :options="options" v-model="dietList" :multiple="true"/>
           </div>
-          <div v-if="showOther()">
+          <div v-if="showOther() && diet">
             <label>
               Anders;
             </label>
@@ -43,35 +55,102 @@
               <input type="text" v-model="inputAnders" class="inputStyle">
             </div>
           </div>
-          <div class="d-flex bg-transparent" style="justify-content: space-between; margin: 20px 40px;">
-            <button type="button" class="btn btn-primary" @click="setHotel(true)">
+          <div class="d-flex bg-transparent" style="justify-content: space-between;" :style="screenWidth>500?'margin-top:20px;':'margin: 10px 0;'">
+            <button type="button" class="btn" :style="hotel === true ? 'background: #42b983;' : ''" :class="screenWidth > 500 ? 'buttonStyleRegular' : 'buttonStyleMobile'" @click="setHotel(true)">
               Ik wil overnachten
             </button>
-            <button type="button" class="btn btn-primary" @click="setHotel(false)">
+            <button type="button" class="btn" @click="setHotel(false)" :style="hotel === false ? 'background: #42b983;' : ''" :class="screenWidth > 500 ? 'buttonStyleRegular' : 'buttonStyleMobile'">
               Ik wil niet overnachten
             </button>
           </div>
 
+          <div v-if="hotel === false" class="mt-2">
+            Wil je niet blijven overnachten en woon je niet in de buurt van Maasland?
+            Laat dit dan ook weten middels onderstaand formulier, zodat de mogelijkheden omtrent vervoer besproken kunnen worden.
+          </div>
 
+          <div v-if="hotel === true || hotel === false" :style="screenWidth > 500 ? 'margin-top: 16px;' : ''">
+            <div v-if="hotel === true">
+              In dat geval hebben we enkele gegevens nodig voor de reservering:
+            </div>
+            <div>
+              <label class="mt-2">
+                Voornaam
+              </label>
+            </div>
+            <input type="text" v-model="firstName" class="inputStyle">
+            <label class="mt-2">
+              Achternaam
+            </label>
+            <input type="text" v-model="lastName" class="inputStyle">
+          </div>
+          <div v-if="hotel">
+            <label class="mt-2">
+              Straatnaam + huisnummer
+            </label>
+            <input type="text" v-model="street" class="inputStyle">
+            <div class="row m-0">
+              <div class="col-6 pl-0">
+                <div>
+                  <label class="mt-2">
+                    Postcode
+                  </label>
+                </div>
+                <input type="text" v-model="postalCode" class="inputStyle">
+              </div>
+              <div class="col-6 pr-0">
+                <div>
+                  <label class="mt-2">
+                    Woonplaats
+                  </label>
+                </div>
+                <input type="text" v-model="city" class="inputStyle">
+              </div>
+            </div>
+          </div>
 
-          Je dieetwensen hebt;
-          Je wilt blijven overnachten of gebruik wil maken van vervoer (zie hier);
-          Je wil speechen of het bruidspaar op een andere manier in het ‘zonnetje’ wil zetten ;)
+          <div class="mt-3">
+            <button class="btn" style="width: 100%;" @click="sendForm">Verstuur formulier</button>
+          </div>
 
-          Dagindeling
-          Om alvast een tipje van de sluier op te lichten kun je hieronder de planning op hoofdlijnen vinden.
-
-          14.00 - Inloop
-          14.30 - Ceremonie
-          15.30 - Borrel
-          18.00 - Diner
-          20.30 - Feest
-          00.00 - Einde
-
-          Cadeautip
-          $$$$$$$$$$$$$$$$$$$$$$$$$$
-<!--          <Pictogram envelopje>-->
-
+          <div class="mt-5" style="font-size:20px;">
+            <label style="font-size:24px;" class="d-flex justify-content-center">Dagindeling</label>
+            Om alvast een tipje van de sluier op te lichten kun je hieronder de planning op hoofdlijnen vinden.
+          </div>
+          <div class="mt-2 d-flex justify-content-center">
+            <table>
+              <tr>
+                <td class="tdStyle">
+                  14.00  -  Inloop
+                </td>
+              </tr>
+              <tr>
+                <td class="tdStyle">
+                  14.30  -  Ceremonie
+                </td>
+              </tr>
+              <tr>
+                <td class="tdStyle">
+                  15.30  -  Borrel
+                </td>
+              </tr>
+              <tr>
+                <td class="tdStyle">
+                  18.00  -  Diner
+                </td>
+              </tr>
+              <tr>
+                <td class="tdStyle">
+                  20.30  -  Feest
+                </td>
+              </tr>
+              <tr>
+                <td class="tdStyle">
+                  00.00  -  Einde
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -82,6 +161,9 @@
 
 import Treeselect from '@riophae/vue-treeselect'
 import '@riophae/vue-treeselect/dist/vue-treeselect.css'
+import {db} from "@/main";
+import {addDoc, collection} from 'firebase/firestore'
+import Notifications from 'vue-notification'
 export default {
   name: "UsefulInfo",
   components:{
@@ -94,6 +176,11 @@ export default {
       dietList: [],
       inputAnders: null,
       hotel: null,
+      firstName: null,
+      lastName: null,
+      street: null,
+      postalCode: null,
+      city: null,
       options: [
         {
           id: 'vega',
@@ -121,29 +208,90 @@ export default {
     })
   },
   methods:{
+    async sendForm() {
+      const isHotel = this.hotel === true && this.firstName && this.lastName && this.street && this.postalCode && this.city;
+      const isNotHotel = this.hotel === false && this.firstName && this.lastName;
+      const isDiet = this.diet === true && this.dietList.length;
+      if (isHotel || isNotHotel || isDiet) {
+        let hotelInfo;
+        if (this.hotel === true) {
+          hotelInfo = {
+            straatnaam: this.street,
+            postCode: this.postalCode,
+            woonplaats: this.city,
+          };
+        } else {
+          hotelInfo = 'nee';
+        }
+        const response = await addDoc(collection(db, "antwoorden"), {
+          voornaam: this.firstName,
+          achternaam: this.lastName,
+          hotel: this.hotel,
+          dieet: this.dietList.length ? this.dietList : 'nee',
+          hotelInfo: hotelInfo,
+        })
+        if (response) {
+          this.$notify({
+            group: 'foo',
+            title: 'Succes!',
+            text: this.hotel === true ? 'Dank je wel voor het invullen van het formulier, en gezellig dat je blijft slapen :)' : 'Bedankt voor het invullen van het formulier.',
+            position: 'top center',
+            type: 'success'
+          })
+        }
+        console.log(response);
+      } else {
+        this.$notify({
+          group: 'foo',
+          title: 'Oeps!',
+          text: 'Vul alsjeblieft eerst alle informatie in.',
+          position: 'top center',
+          type: 'error'
+        })
+      }
+    },
     resizeScreen() {
       this.screenWidth = window.innerWidth;
       console.log('Gluiperdt');
     },
     setDiet(input) {
-      console.log(this.dietList);
       this.diet = input;
     },
     setHotel(input) {
       this.hotel = input;
     },
     showOther() {
-      // console.log(this.dietList.length > 1);
       return this.dietList.length > 0 && this.dietList.includes('anders');
-      // return true;
     },
   }
 }
 </script>
 
 <style scoped>
+button {
+  color: black;
+  background: transparent;
+  border: 2px solid #42b983;
+}
+button:hover {
+  background: #42b983;
+}
+.buttonStyleRegular {
+  width: 210px;
+}
+
+.buttonStyleMobile {
+  width: 100%;
+  padding: 10px 0;
+}
+.tdStyle {
+  font-family: "Candara Light";
+  font-size: 30px;
+  padding: 6px;
+}
 div {
-  font-size: 16px;
+  font-size: 20px;
+  font-family:"Candara Light";
 }
 .inputStyle{
   border: none;
@@ -155,7 +303,7 @@ div {
   outline: none;
 }
 .image {
-  opacity: 0.5;
+  opacity: 0.4;
   width:100%;
   z-index: 0;
   position: absolute;

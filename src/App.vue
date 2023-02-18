@@ -20,6 +20,9 @@
     <div>
       <router-view/>
     </div>
+    <div>
+      <notifications group="foo" />
+    </div>
   </div>
 </template>
 <script>
