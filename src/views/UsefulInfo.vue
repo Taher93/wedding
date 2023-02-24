@@ -2,23 +2,23 @@
   <div>
     <div class="image">
       <div style="position: relative;">
-        <img :src="screenWidth > 500 ? require('@/assets/image00002.jpeg') : require('@/assets/image00002.jpeg')" style="width: 100%;">
+        <img :src="screenWidth > 600 ? require('@/assets/image00002.jpeg') : require('@/assets/image00002.jpeg')" style="width: 100%;">
       </div>
-      <div style="position: relative;" v-if="screenWidth < 500 || (screenWidth > 500 && diet && hotel)">
-        <img :src="screenWidth > 500 ? require('@/assets/image00001.jpeg') : require('@/assets/image00003.jpeg')" style="width: 100%;">
+      <div style="position: relative;" v-if="screenWidth < 600 || (screenWidth > 600 && diet && hotel)">
+        <img :src="screenWidth > 600 ? require('@/assets/image00001.jpeg') : require('@/assets/image00003.jpeg')" style="width: 100%;">
       </div>
-      <div style="position: relative;" v-if="screenWidth < 500">
-        <img :src="screenWidth > 500 ? require('@/assets/image00001.jpeg') : require('@/assets/image00004.jpeg')" style="width: 100%;">
+      <div style="position: relative;" v-if="screenWidth < 600">
+        <img :src="require('@/assets/image00004.jpeg')" style="width: 100%;">
       </div>
-      <div style="position: relative;" v-if="screenWidth < 500 && hotel">
-        <img :src="screenWidth > 500 ? require('@/assets/image00001.jpeg') : require('@/assets/image00004.jpeg')" style="width: 100%;">
+      <div style="position: relative;" v-if="screenWidth < 600 && hotel">
+        <img :src="require('@/assets/image00005.jpeg')" style="width: 100%;">
       </div>
     </div>
     <div class="container mt-4">
       <div class="row m-0">
-        <div :class="screenWidth > 500 ? 'col-6 offset-3' : 'col-12 p-0'">
+        <div :class="screenWidth > 600 ? 'col-8 offset-2' : 'col-12 p-0'">
           <div class="mt-2">
-            <label style="font-size:24px;" class="d-flex justify-content-center">Handige informatie</label>
+            <label style="font-size:40px; font-family: Houstoner, QuattrocentoSans;" class="d-flex justify-content-center">Handige informatie</label>
           </div>
           <div class="mt-2">
             Hayet, ons (schoon)zusje, is ceremoniemeester en is druk bezig met de voorbereidingen.
@@ -33,11 +33,11 @@
             Mocht je nog verdere vragen hebben of wilt speechen dan kun je die mailen naar <a href="mailto:ceremoniemeester@huwelijktaherenfleur.nl">
             ceremoniemeester@huwelijktaherenfleur.nl</a>
           </div>
-          <div class="d-flex bg-transparent" style="justify-content: space-between;" :style="screenWidth > 500 ? 'margin: 20px 0;' : 'margin: 10px 0;'">
-            <button type="button" class="btn" @click="setDiet(true)" :style="diet === true ? 'background: #42b983;' : ''" :class="screenWidth > 500 ? 'buttonStyleRegular' : 'buttonStyleMobile'">
+          <div class="d-flex bg-transparent" style="justify-content: space-between;" :style="screenWidth > 600 ? 'margin: 20px 0;' : 'margin: 10px 0;'">
+            <button type="button" class="btn" @click="setDiet(true)" :style="diet === true ? 'background: #42b983;' : ''" :class="screenWidth > 600 ? 'buttonStyleRegular' : 'buttonStyleMobile'">
               Ik heb dieetwensen
             </button>
-            <button type="button" class="btn" @click="setDiet(false)" :style="diet === false ? 'background: #42b983;' : ''" :class="screenWidth > 500 ? 'buttonStyleRegular' : 'buttonStyleMobile'">
+            <button type="button" class="btn" @click="setDiet(false)" :style="diet === false ? 'background: #42b983;' : ''" :class="screenWidth > 600 ? 'buttonStyleRegular' : 'buttonStyleMobile'">
               Ik heb geen dieetwensen
             </button>
           </div>
@@ -55,11 +55,11 @@
               <input type="text" v-model="inputAnders" class="inputStyle">
             </div>
           </div>
-          <div class="d-flex bg-transparent" style="justify-content: space-between;" :style="screenWidth>500?'margin-top:20px;':'margin: 10px 0;'">
-            <button type="button" class="btn" :style="hotel === true ? 'background: #42b983;' : ''" :class="screenWidth > 500 ? 'buttonStyleRegular' : 'buttonStyleMobile'" @click="setHotel(true)">
+          <div class="d-flex bg-transparent" style="justify-content: space-between;" :style="screenWidth>600?'margin-top:20px;':'margin: 10px 0;'">
+            <button type="button" class="btn" :style="hotel === true ? 'background: #42b983;' : ''" :class="screenWidth > 600 ? 'buttonStyleRegular' : 'buttonStyleMobile'" @click="setHotel(true)">
               Ik wil overnachten
             </button>
-            <button type="button" class="btn" @click="setHotel(false)" :style="hotel === false ? 'background: #42b983;' : ''" :class="screenWidth > 500 ? 'buttonStyleRegular' : 'buttonStyleMobile'">
+            <button type="button" class="btn" @click="setHotel(false)" :style="hotel === false ? 'background: #42b983;' : ''" :class="screenWidth > 600 ? 'buttonStyleRegular' : 'buttonStyleMobile'">
               Ik wil niet overnachten
             </button>
           </div>
@@ -69,7 +69,7 @@
             Laat dit dan ook weten middels onderstaand formulier, zodat de mogelijkheden omtrent vervoer besproken kunnen worden.
           </div>
 
-          <div v-if="hotel === true || hotel === false" :style="screenWidth > 500 ? 'margin-top: 16px;' : ''">
+          <div v-if="hotel === true || hotel === false" :style="screenWidth > 600 ? 'margin-top: 16px;' : ''">
             <div v-if="hotel === true">
               In dat geval hebben we enkele gegevens nodig voor de reservering:
             </div>
@@ -110,11 +110,11 @@
           </div>
 
           <div class="mt-3">
-            <button class="btn" style="width: 100%;" @click="sendForm">Verstuur formulier</button>
+            <button class="btn" style="width: 100%; font-size: 20px;" @click="sendForm">Verstuur formulier</button>
           </div>
 
           <div class="mt-5" style="font-size:20px;">
-            <label style="font-size:24px;" class="d-flex justify-content-center">Dagindeling</label>
+            <label style="font-size:40px; font-family: Houstoner, QuattrocentoSans;" class="d-flex justify-content-center">Dagindeling</label>
             Om alvast een tipje van de sluier op te lichten kun je hieronder de planning op hoofdlijnen vinden.
           </div>
           <div class="mt-2 d-flex justify-content-center">
@@ -277,7 +277,8 @@ button:hover {
   background: #42b983;
 }
 .buttonStyleRegular {
-  width: 210px;
+  width: 240px;
+  font-size: 20px;
 }
 
 .buttonStyleMobile {
@@ -285,13 +286,13 @@ button:hover {
   padding: 10px 0;
 }
 .tdStyle {
-  font-family: "Candara Light";
+  font-family: "QuattrocentoSans";
   font-size: 30px;
   padding: 6px;
 }
 div {
   font-size: 20px;
-  font-family:"Candara Light";
+  font-family:"QuattrocentoSans";
 }
 .inputStyle{
   border: none;

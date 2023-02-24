@@ -2,18 +2,18 @@
   <div>
     <div class="image">
       <div style="position: relative;">
-        <img :src="screenWidth > 500 ? require('@/assets/engagement.jpg') : require('@/assets/engagement_mobile.jpeg')" style="width: 100%;">
+        <img :src="screenWidth > 600 ? require('@/assets/engagement.jpg') : require('@/assets/engagement_mobile.jpeg')" style="width: 100%;">
       </div>
     </div>
-    <div :class="screenWidth > 500 ? 'regRoot' : 'mobileRoot'">
+    <div :class="screenWidth > 600 ? 'regRoot' : 'mobileRoot'">
       <div class="styleme">
-        <div class="header" :class="screenWidth > 500 ? 'styleReg' : 'styleMobile'">
+        <div class="header" :class="screenWidth > 600 ? 'styleReg' : 'styleMobile'">
           Bruiloft
         </div>
       </div>
       <div class="styleme">
-        <div class="header" :class="screenWidth > 500 ? 'styleReg' : 'styleMobile'">
-          Taher & Fleur
+        <div class="header" :class="screenWidth > 600 ? 'styleReg' : 'styleMobile'">
+          Taher <span style="font-family: 'Houstoner amp', 'QuattrocentoSans';">E</span> Fleur
         </div>
       </div>
     </div>
@@ -87,7 +87,7 @@ export default {
 .styleReg {
   color:white;
   margin-top: 30px;
-  font-size: 60px;
+  font-size: 90px;
 }
 
 .styleme {
@@ -95,7 +95,7 @@ export default {
   justify-content: center;
 }
 .header {
-  font-family: "Lucida Handwriting";
+  font-family: 'Houstoner', 'QuattrocentoSans';
   font-weight: 100;
 }
 

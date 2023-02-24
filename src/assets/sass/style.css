@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Houstoner';
+  src: url('~@/assets/fonts/Houstoner Script.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Houstoner amp';
+  src: url('~@/assets/fonts/Houstoner Ampersand.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'QuattrocentoSans';
+  src: url('~@/assets/fonts/QuattrocentoSans-Regular.ttf') format('truetype');
+}

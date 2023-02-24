@@ -2,17 +2,17 @@
   <div>
     <div class="image">
       <div style="position: relative;">
-        <img :src="screenWidth > 500 ? require('@/assets/image00003.jpeg') : require('@/assets/image00005.jpeg')" style="width: 100%;">
+        <img :src="screenWidth > 600 ? require('@/assets/image00003.jpeg') : require('@/assets/image00005.jpeg')" style="width: 100%;">
       </div>
-      <div style="position: relative;" v-if="screenWidth < 500">
-        <img :src="screenWidth > 500 ? require('@/assets/image00001.jpeg') : require('@/assets/image00003.jpeg')" style="width: 100%;">
+      <div style="position: relative;" v-if="screenWidth < 600">
+        <img :src="screenWidth > 600 ? require('@/assets/image00001.jpeg') : require('@/assets/image00003.jpeg')" style="width: 100%;">
       </div>
     </div>
     <div class="container mt-4">
       <div class="row m-0">
-        <div :class="screenWidth > 500 ? 'col-6 offset-3' : 'col-12 p-0'">
+        <div :class="screenWidth > 600 ? 'col-8 offset-2' : 'col-12 p-0'">
           <div class="mt-2">
-            <label style="font-size:24px;" class="d-flex justify-content-center">Locatie</label>
+            <label style="font-size:40px; font-family: Houstoner, QuattrocentoSans;" class="d-flex justify-content-center">Locatie</label>
           </div>
           <div>
             Het is maandenlang geheim gebleven, maar vanaf nu kunnen we het eindelijk bekend maken.
@@ -47,7 +47,7 @@
             <GmapMap
                 :center="center"
                 :zoom="15"
-                :style="screenWidth > 500 ? 'width:100%; height: 600px;' : 'width: 100%; height: 400px;'"
+                :style="screenWidth > 600 ? 'width:100%; height: 600px;' : 'width: 100%; height: 400px;'"
             >
               <GmapMarker
                   :position="marker"
@@ -90,7 +90,7 @@ export default {
 <style scoped>
 div {
   font-size: 20px;
-  font-family:"Candara Light";
+  font-family:"QuattrocentoSans";
 }
 .image {
   opacity: 0.4;
