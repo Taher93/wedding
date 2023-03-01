@@ -2,13 +2,13 @@
   <div>
     <div class="image">
       <div style="position: relative;">
-        <img :src="screenWidth > 600 ? require('@/assets/image00002.jpeg') : require('@/assets/image00002.jpeg')" style="width: 100%;">
-      </div>
-      <div style="position: relative;" v-if="screenWidth < 600 || (screenWidth > 600 && diet && hotel)">
-        <img :src="screenWidth > 600 ? require('@/assets/image00001.jpeg') : require('@/assets/image00003.jpeg')" style="width: 100%;">
+        <img :src="screenWidth > 600 ? require('@/assets/image00004.jpeg') : require('@/assets/image00002.jpeg')" style="width: 100%;">
       </div>
       <div style="position: relative;" v-if="screenWidth < 600">
         <img :src="require('@/assets/image00004.jpeg')" style="width: 100%;">
+      </div>
+      <div style="position: relative;" v-if="screenWidth < 600">
+        <img :src="require('@/assets/image00003.jpeg')" style="width: 100%;">
       </div>
       <div style="position: relative;" v-if="screenWidth < 600 && hotel">
         <img :src="require('@/assets/image00005.jpeg')" style="width: 100%;">
@@ -34,10 +34,10 @@
             ceremoniemeester@huwelijktaherenfleur.nl</a>
           </div>
           <div class="d-flex bg-transparent" style="justify-content: space-between;" :style="screenWidth > 600 ? 'margin: 20px 0;' : 'margin: 10px 0;'">
-            <button type="button" class="btn" @click="setDiet(true)" :style="diet === true ? 'background: #42b983;' : ''" :class="screenWidth > 600 ? 'buttonStyleRegular' : 'buttonStyleMobile'">
+            <button type="button" class="btn" @click="setDiet(true)" :style="diet === true ? 'background: #FFFFFF;' : ''" :class="screenWidth > 600 ? 'buttonStyleRegular' : 'buttonStyleMobile'">
               Ik heb dieetwensen
             </button>
-            <button type="button" class="btn" @click="setDiet(false)" :style="diet === false ? 'background: #42b983;' : ''" :class="screenWidth > 600 ? 'buttonStyleRegular' : 'buttonStyleMobile'">
+            <button type="button" class="btn" @click="setDiet(false)" :style="diet === false ? 'background: #FFFFFF;' : ''" :class="screenWidth > 600 ? 'buttonStyleRegular' : 'buttonStyleMobile'">
               Ik heb geen dieetwensen
             </button>
           </div>
@@ -56,16 +56,16 @@
             </div>
           </div>
           <div class="d-flex bg-transparent" style="justify-content: space-between;" :style="screenWidth>600?'margin-top:20px;':'margin: 10px 0;'">
-            <button type="button" class="btn" :style="hotel === true ? 'background: #42b983;' : ''" :class="screenWidth > 600 ? 'buttonStyleRegular' : 'buttonStyleMobile'" @click="setHotel(true)">
+            <button type="button" class="btn" :style="hotel === true ? 'background: #FFFFFF;' : ''" :class="screenWidth > 600 ? 'buttonStyleRegular' : 'buttonStyleMobile'" @click="setHotel(true)">
               Ik wil overnachten
             </button>
-            <button type="button" class="btn" @click="setHotel(false)" :style="hotel === false ? 'background: #42b983;' : ''" :class="screenWidth > 600 ? 'buttonStyleRegular' : 'buttonStyleMobile'">
+            <button type="button" class="btn" @click="setHotel(false)" :style="hotel === false ? 'background: #FFFFFF;' : ''" :class="screenWidth > 600 ? 'buttonStyleRegular' : 'buttonStyleMobile'">
               Ik wil niet overnachten
             </button>
           </div>
 
-          <div v-if="hotel === false" class="mt-2">
-            Wil je niet blijven overnachten en woon je niet in de buurt van Maasland?
+          <div v-if="hotel === false" class="mt-4">
+            Wil je niet blijven overnachten?
             Laat dit dan ook weten middels onderstaand formulier, zodat de mogelijkheden omtrent vervoer besproken kunnen worden.
           </div>
 
@@ -271,13 +271,16 @@ export default {
 button {
   color: black;
   background: transparent;
-  border: 2px solid #42b983;
+  border: 2px solid #FFFFFF;
 }
 button:hover {
-  background: #42b983;
+  background: #FFFFFF;
+}
+button:focus {
+  outline: none !important;
 }
 .buttonStyleRegular {
-  width: 240px;
+  width: 260px;
   font-size: 20px;
 }
 

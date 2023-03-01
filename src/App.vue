@@ -4,9 +4,6 @@
       <div class="styling col-md-auto" :class="screenWidth > 600 ? 'styleRegular' : 'styleMobile text-right'">
         <router-link to="/">Home</router-link>
       </div>
-      <div class="styling col-md-auto" :class="screenWidth > 600 ? 'styleRegular' : 'styleMobile text-right'">
-        <router-link to="/handigelinks">Handige informatie</router-link>
-      </div>
       <div class="styling col-md-auto" :class="screenWidth > 600 ? 'styleRegular mr-3' : 'styleMobile text-right'">
         <router-link to="/locatie">Locatie</router-link>
       </div>
@@ -15,6 +12,9 @@
       </div>
       <div class="styling col-md-auto" :class="screenWidth > 600 ? 'styleRegular mr-3' : 'styleMobile text-right'">
         <router-link to="/dresscode">Dresscode</router-link>
+      </div>
+      <div class="styling col-md-auto" :class="screenWidth > 600 ? 'styleRegular' : 'styleMobile text-right'">
+        <router-link to="/handigelinks">Handige informatie</router-link>
       </div>
     </div>
     <div>
@@ -69,7 +69,7 @@ body {
 }
 
 .styling {
-  font-family: "Candara";
+  font-family: QuattrocentoSans;
   background: transparent;
   color: #2c3e50;
   z-index: 1;
@@ -91,6 +91,6 @@ div a {
 }
 
 div a.router-link-exact-active {
-  color: #42b983;
+  color: #FFFFFF;
 }
 </style>

@@ -2,7 +2,7 @@
   <div>
     <div class="image">
       <div style="position: relative;">
-        <img :src="screenWidth > 600 ? require('@/assets/image00003.jpeg') : require('@/assets/image00005.jpeg')" style="width: 100%;">
+        <img :src="screenWidth > 600 ? require('@/assets/image00003.jpeg') : require('@/assets/kiss.jpg')" style="width: 100%;">
       </div>
       <div style="position: relative;" v-if="screenWidth < 600">
         <img :src="screenWidth > 600 ? require('@/assets/image00001.jpeg') : require('@/assets/image00003.jpeg')" style="width: 100%;">
@@ -39,7 +39,7 @@
             En natuurlijk een plek die emotionele waarde heeft voor de bruid. Wij kunnen niet wachten!
           </div>
           <div>
-            Google maps navigatie:
+            <a href="https://goo.gl/maps/FqRvEL6juWTUJ9ES7">Klik hier voor Google Maps navigatie.</a>
           </div>
         </div>
         <div class="col-md-12">

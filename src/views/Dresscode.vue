@@ -8,8 +8,8 @@
     <div class="container mt-4">
       <div class="row m-0">
         <div :class="screenWidth > 600 ? 'col-8 offset-2' : 'col-12 p-0'">
-          <div class="mt-5">
-            <label style="font-size:26px; font-family: 'QuattrocentoSans'" class="d-flex justify-content-center">Dresscode</label>
+          <div class="mt-3">
+            <label style="font-size:40px; font-family: Houstoner, QuattrocentoSans;" class="d-flex justify-content-center">Dresscode</label>
           </div>
           <div class="d-flex justify-content-center" style="font-family: 'QuattrocentoSans'; text-align:center; margin-top: 40px;">
             Deze speciale dag kent een dresscode die past bij de sfeer van de locatie.
@@ -22,27 +22,56 @@
           <div class="d-flex justify-content-center" style="font-family: 'QuattrocentoSans'; text-align:center; margin-top: 40px;" >
             We willen jullie vriendelijk verzoeken te kleden in één van onderstaande kleuren.
           </div>
+        </div>
+        <div class="col-12">
 
-          <div class="d-flex justify-content-between mt-4" v-if="screenWidth > 600" style="margin-top: 40px;">
-            <button class="buttonStyle" style="background: #cb6834"></button>
-            <button class="buttonStyle" style="background: #e5aa70"></button>
-            <button class="buttonStyle" style="background: #f4d39f"></button>
-            <button class="buttonStyle" style="background: #4f7942"></button>
-            <button class="buttonStyle" style="background: #355e3b"></button>
+          <div class="d-flex mt-4" v-if="screenWidth > 600" style="margin-top: 40px; justify-content: space-evenly;">
+            <div>
+              <button class="buttonStyle" style="background: #cb6834; margin-left: 20px;"></button>
+              <div>Donker koraal</div>
+            </div>
+            <div>
+              <button class="buttonStyle" style="background: #e5aa70; margin-left: 40px;"></button>
+              <div class="d-flex justify-content-center">Licht (vacht) bruin</div>
+            </div>
+            <div>
+              <button class="buttonStyle" style="background: #f4d39f"></button>
+              <div class="d-flex justify-content-center">Tarwe</div>
+            </div>
+            <div>
+              <button class="buttonStyle" style="background: #4f7942"></button>
+              <div>Varengroen</div>
+            </div>
+            <div>
+              <button class="buttonStyle" style="background: #355e3b"></button>
+              <div>Jagersgroen</div>
+            </div>
           </div>
 
           <div class="d-flex justify-content-between" style="margin-top: 40px;" v-if="screenWidth <= 600">
-            <button class="buttonStyle" style="background: #cb6834"></button>
-            <button class="buttonStyle" style="background: #f4d39f"></button>
-            <button class="buttonStyle" style="background: #355e3b"></button>
+            <div>
+              <button class="buttonStyle" style="background: #cb6834; margin-left:22px;"></button>
+              <div>Donker koraal</div>
+            </div>
+            <div>
+              <button class="buttonStyle" style="background: #f4d39f"></button>
+              <div class="d-flex justify-content-center">Tarwe</div>
+            </div>
+            <div>
+              <button class="buttonStyle" style="background: #355e3b; margin-left:15px;"></button>
+              <div>Jagersgroen</div>
+            </div>
           </div>
 
-          <div class="d-flex justify-content-between mt-2" v-if="screenWidth <= 600">
-            <button class="buttonStyle" style="background: #cb6834; visibility: hidden;"></button>
-            <button class="buttonStyle" style="background: #e5aa70"></button>
-            <button class="buttonStyle" style="background: #f4d39f; visibility: hidden;"></button>
-            <button class="buttonStyle" style="background: #4f7942"></button>
-            <button class="buttonStyle" style="background: #355e3b; visibility: hidden;"></button>
+          <div class="d-flex mt-2" style="justify-content: space-evenly;" v-if="screenWidth <= 600">
+            <div>
+              <button class="buttonStyle" style="background: #e5aa70; margin-left:40px;"></button>
+              <div class="d-flex justify-content-center">Licht (vacht) bruin</div>
+            </div>
+            <div>
+              <button class="buttonStyle" style="background: #4f7942"></button>
+              <div>Varengroen</div>
+            </div>
           </div>
 
         </div>

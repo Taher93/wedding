@@ -2,10 +2,10 @@
   <div>
     <div class="image">
       <div style="position: relative;">
-        <img :src="screenWidth > 600 ? require('@/assets/image00003.jpeg') : require('@/assets/image00005.jpeg')" style="width: 100%;">
+        <img :src="screenWidth > 600 ? require('@/assets/lolz.jpg') : require('@/assets/lolz.jpg')" style="width: 100%;">
       </div>
       <div style="position: relative;" v-if="screenWidth < 600">
-        <img :src="screenWidth > 600 ? require('@/assets/image00001.jpeg') : require('@/assets/image00003.jpeg')" style="width: 100%;">
+        <img :src="screenWidth > 600 ? '' : require('@/assets/image00003.jpeg')" style="width: 100%;">
       </div>
     </div>
     <div class="container mt-4">
@@ -15,34 +15,17 @@
             Overnachting&nbsp;<span style="font-family: 'Houstoner amp'">E</span>&nbsp;vervoer
           </div>
           <div class="mt-3">
-            Het bruidspaar zou het heel gezellig vinden als jullie blijven overnachten en de volgende dag met hen ontbijten en nagenieten. Om dit toegankelijk te maken voor een ieder is er samen met Hotel Van der Valk Delft afgesproken dat alle bruiloftsgasten tegen een gereduceerd tarief kunnen overnachten. Een tweepersoonskamer inclusief ontbijt kan geboekt worden voor slechts €99. Hotel Van der Valk Delft is in 2023 open gegaan en alles is dus gloednieuw. Zie hier/hieronder voor enkele sfeerimpressies.
+            Het bruidspaar zou het heel gezellig vinden als jullie blijven overnachten en de volgende dag met hen ontbijten en nagenieten.
+            Om dit toegankelijk te maken voor een ieder is er samen met Hotel Van der Valk Delft afgesproken dat alle bruiloftsgasten tegen een gereduceerd tarief kunnen overnachten.
+            Een tweepersoonskamer inclusief ontbijt kan geboekt worden voor slechts €99.
+            Hotel Van der Valk Delft is in 2023 open gegaan en alles is dus gloednieuw.
           </div>
-          <div>
-            De plaats waar wij gaan trouwen is… Maasland!
-          </div>
-          <div>
-            De vader van de bruid heeft een mooi stukje land wat we laten omdopen tot trouwlocatie voor één dag.
-          </div>
-          <div>
-            Alles zal worden opgebouwd om het huwelijk plaats te laten vinden, aangezien er nauwelijks voorzieningen zijn.
-          </div>
-          <div>
-            Een flinke klus, maar met de juiste mensen aan boord hebben we er vertrouwen in.
-          </div>
-          <div>
-            Bijkomend voordeel: we kunnen het helemaal opbouwen zoals wij willen.
-          </div>
-          <div>
-            Want hoe bijzonder is het om te trouwen op een plek waar nog nooit eerder iemand getrouwd is!
-          </div>
-          <div>
-            En natuurlijk een plek die emotionele waarde heeft voor de bruid. Wij kunnen niet wachten!
-          </div>
-          <div>
-            Google maps navigatie:
+          <div class="mt-3">
+            Klik hier voor enkele sfeerimpressies: <a href="https://www.hoteldelft.com/">hoteldelft.com</a>
           </div>
         </div>
         <div class="col-md-12">
+
         </div>
       </div>
     </div>
