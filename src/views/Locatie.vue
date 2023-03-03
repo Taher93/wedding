@@ -15,30 +15,17 @@
             <label style="font-size:40px; font-family: Houstoner, QuattrocentoSans;" class="d-flex justify-content-center">Locatie</label>
           </div>
           <div>
-            Het is maandenlang geheim gebleven, maar vanaf nu kunnen we het eindelijk bekend maken.
+            Het is maandenlang geheim gebleven, maar vanaf nu kunnen we het eindelijk bekend maken. Wij gaan elkaar het ja-woord geven in … Maasland!
           </div>
           <div>
-            De plaats waar wij gaan trouwen is… Maasland!
+            De vader van de bruid heeft een mooi stuk grond in de polders van Maasland. Dit perceel laten we omdopen tot trouwlocatie voor één dag.
           </div>
           <div>
-            De vader van de bruid heeft een mooi stukje land wat we laten omdopen tot trouwlocatie voor één dag.
+            Alles zal worden opgebouwd om het huwelijk plaats te laten vinden, aangezien er nauwelijks voorzieningen zijn. Een flinke klus, maar met de juiste mensen aan boord hebben we er vertrouwen in.
           </div>
-          <div>
-            Alles zal worden opgebouwd om het huwelijk plaats te laten vinden, aangezien er nauwelijks voorzieningen zijn.
+          <div class="mt-3">En het beste is: we kunnen de trouwlocatie helemaal naar eigen wens opbouwen. Het belooft een unieke dag te worden, want het is de eerste keer dat iemand op deze plek trouwt. Maar natuurlijk ook een plek die emotionele waarde heeft voor de bruid. Wij kunnen niet wachten!
           </div>
-          <div>
-            Een flinke klus, maar met de juiste mensen aan boord hebben we er vertrouwen in.
-          </div>
-          <div>
-            Bijkomend voordeel: we kunnen het helemaal opbouwen zoals wij willen.
-          </div>
-          <div>
-            Want hoe bijzonder is het om te trouwen op een plek waar nog nooit eerder iemand getrouwd is!
-          </div>
-          <div>
-            En natuurlijk een plek die emotionele waarde heeft voor de bruid. Wij kunnen niet wachten!
-          </div>
-          <div>
+          <div class="mt-3">
             <a href="https://goo.gl/maps/FqRvEL6juWTUJ9ES7">Klik hier voor Google Maps navigatie.</a>
           </div>
         </div>

@@ -5,10 +5,10 @@
         <img :src="screenWidth > 600 ? require('@/assets/image00004.jpeg') : require('@/assets/image00002.jpeg')" style="width: 100%;">
       </div>
       <div style="position: relative;" v-if="screenWidth < 600">
-        <img :src="require('@/assets/image00004.jpeg')" style="width: 100%;">
+        <img :src="require('@/assets/hmmmmm.jpg')" style="width: 100%;">
       </div>
       <div style="position: relative;" v-if="screenWidth < 600">
-        <img :src="require('@/assets/image00003.jpeg')" style="width: 100%;">
+        <img :src="require('@/assets/cheersimg.jpg')" style="width: 100%;">
       </div>
       <div style="position: relative;" v-if="screenWidth < 600 && hotel">
         <img :src="require('@/assets/image00005.jpeg')" style="width: 100%;">
@@ -21,16 +21,10 @@
             <label style="font-size:40px; font-family: Houstoner, QuattrocentoSans;" class="d-flex justify-content-center">Handige informatie</label>
           </div>
           <div class="mt-2">
-            Hayet, ons (schoon)zusje, is ceremoniemeester en is druk bezig met de voorbereidingen.
+            Om ervoor te zorgen dat alles vlekkeloos verloopt, is het belangrijk om bepaalde zaken met elkaar af te stemmen. Daarom willen we je vragen om het onderstaande formulier in te vullen.
           </div>
-          <div>
-            Daarom is afstemming omtrent enkele onderwerpen gewenst.
-          </div>
-          <div>
-            Zouden jullie zo vriendelijk willen zijn om het onderstaande formulier in te vullen?
-          </div>
-          <div>
-            Mocht je nog verdere vragen hebben of wilt speechen dan kun je die mailen naar <a href="mailto:ceremoniemeester@huwelijktaherenfleur.nl">
+          <div class="mt-3">
+            Als je nog andere vragen hebt of graag een speech wilt geven, aarzel dan niet om contact op te nemen met Hayet via <a href="mailto:ceremoniemeester@huwelijktaherenfleur.nl">
             ceremoniemeester@huwelijktaherenfleur.nl</a>
           </div>
           <div class="d-flex bg-transparent" style="justify-content: space-between;" :style="screenWidth > 600 ? 'margin: 20px 0;' : 'margin: 10px 0;'">
@@ -45,7 +39,7 @@
             <label class="bg-transparent">
               Dieetwensen
             </label>
-            <Treeselect class="bg-transparent" style="height: 40px;" :options="options" v-model="dietList" :multiple="true"/>
+            <Treeselect class="bg-transparent" style="height: 40px;" :placeholder="'Selecteer'" :options="options" v-model="dietList" :multiple="true"/>
           </div>
           <div v-if="showOther() && diet">
             <label>
@@ -228,6 +222,7 @@ export default {
           achternaam: this.lastName,
           hotel: this.hotel,
           dieet: this.dietList.length ? this.dietList : 'nee',
+          anders: this.inputAnders ? this.inputAnders : '',
           hotelInfo: hotelInfo,
         })
         if (response) {
@@ -239,7 +234,6 @@ export default {
             type: 'success'
           })
         }
-        console.log(response);
       } else {
         this.$notify({
           group: 'foo',
@@ -290,7 +284,7 @@ button:focus {
 }
 .tdStyle {
   font-family: "QuattrocentoSans";
-  font-size: 30px;
+  font-size: 24px;
   padding: 6px;
 }
 div {

@@ -15,13 +15,16 @@
             Overnachting&nbsp;<span style="font-family: 'Houstoner amp'">E</span>&nbsp;vervoer
           </div>
           <div class="mt-3">
-            Het bruidspaar zou het heel gezellig vinden als jullie blijven overnachten en de volgende dag met hen ontbijten en nagenieten.
-            Om dit toegankelijk te maken voor een ieder is er samen met Hotel Van der Valk Delft afgesproken dat alle bruiloftsgasten tegen een gereduceerd tarief kunnen overnachten.
-            Een tweepersoonskamer inclusief ontbijt kan geboekt worden voor slechts €99.
-            Hotel Van der Valk Delft is in 2023 open gegaan en alles is dus gloednieuw.
+            Het bruidspaar zou het heel gezellig vinden als jullie blijven overnachten en de volgende dag met hen ontbijten en nagenieten. Om dit toegankelijk te maken voor een ieder is er samen met Hotel Van der Valk Delft afgesproken dat alle bruiloftsgasten tegen een gereduceerd tarief kunnen overnachten. Een tweepersoonskamer inclusief ontbijt kan geboekt worden voor slechts €99. Hotel Van der Valk Delft is in 2023 open gegaan en alles is dus gloednieuw. Bijkomend voordeel: je rijdt de volgende dag direct de A4 op richting Haarlem/Amsterdam.
           </div>
           <div class="mt-3">
-            Klik hier voor enkele sfeerimpressies: <a href="https://www.hoteldelft.com/">hoteldelft.com</a>
+            Maak je ook geen zorgen over vervoer naar de trouwlocatie. Er rijdt een bus heen en weer naar Maasland voor alle gasten die blijven overnachten.
+          </div>
+          <div class="mt-3">
+            Klik <a href="https://www.hoteldelft.com/">hier</a> voor enkele sfeerimpressies van het hotel: <a href="https://www.hoteldelft.com/">hoteldelft.com</a>
+          </div>
+          <div class="mt-3">
+            Ga naar de pagina <a href="#/handigelinks">Handige informatie</a> om door te geven of je wilt blijven overnachten.
           </div>
         </div>
         <div class="col-md-12">
