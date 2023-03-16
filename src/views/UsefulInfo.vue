@@ -8,7 +8,7 @@
         <img :src="require('@/assets/hmmmmm.jpg')" style="width: 100%;">
       </div>
       <div style="position: relative;" v-if="screenWidth < 600">
-        <img :src="require('@/assets/cheersimg.jpg')" style="width: 100%;">
+        <img :src="require('@/assets/kiss.jpg')" style="width: 100%;">
       </div>
       <div style="position: relative;" v-if="screenWidth < 600 && hotel">
         <img :src="require('@/assets/image00005.jpeg')" style="width: 100%;">

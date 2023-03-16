@@ -16,7 +16,7 @@
           </div>
 
           <div :style="screenWidth > 600 ? 'font-size: 60px;' : 'font-size: 50px'" style="font-family: 'Houstoner', 'QuattrocentoSans'; text-align:center; margin-top: 40px;">
-            Rustiek doch chique
+            Rustiek doch chic
           </div>
 
           <div class="d-flex justify-content-center" style="font-family: 'QuattrocentoSans'; text-align:center; margin-top: 40px;" >
@@ -39,8 +39,8 @@
               <div class="d-flex justify-content-center">Tarwe</div>
             </div>
             <div>
-              <button class="buttonStyle" style="background: #4f7942"></button>
-              <div>Varengroen</div>
+              <button class="buttonStyle" style="background: #bdedb5; margin-left: 40px;"></button>
+              <div>Licht (natuur) groen</div>
             </div>
             <div>
               <button class="buttonStyle" style="background: #355e3b"></button>
@@ -69,8 +69,8 @@
               <div class="d-flex justify-content-center">Licht (vacht) bruin</div>
             </div>
             <div>
-              <button class="buttonStyle" style="background: #4f7942"></button>
-              <div>Varengroen</div>
+              <button class="buttonStyle" style="background: #bdedb5; margin-left:40px;"></button>
+              <div>Licht (natuur) groen</div>
             </div>
           </div>
 
