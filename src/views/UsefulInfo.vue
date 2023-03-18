@@ -7,11 +7,8 @@
       <div style="position: relative;" v-if="screenWidth < 600">
         <img :src="require('@/assets/hmmmmm.jpg')" style="width: 100%;">
       </div>
-      <div style="position: relative;" v-if="screenWidth < 600">
-        <img :src="require('@/assets/kiss.jpg')" style="width: 100%;">
-      </div>
       <div style="position: relative;" v-if="screenWidth < 600 && hotel">
-        <img :src="require('@/assets/image00005.jpeg')" style="width: 100%;">
+        <img :src="require('@/assets/kiss.jpg')" style="width: 100%;">
       </div>
     </div>
     <div class="container mt-4">
@@ -41,7 +38,7 @@
             </label>
             <Treeselect class="bg-transparent" style="height: 40px;" :placeholder="'Selecteer'" :options="options" v-model="dietList" :multiple="true"/>
           </div>
-          <div v-if="showOther() && diet">
+          <div v-if="showOther() && diet" class="mt-2">
             <label>
               Anders;
             </label>

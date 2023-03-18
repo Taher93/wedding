@@ -5,9 +5,16 @@
         <img :src="screenWidth > 600 ? require('@/assets/image00003.jpeg') : require('@/assets/cheersimg.jpg')" style="width: 100%;">
       </div>
       <div style="position: relative;" v-if="screenWidth < 600">
-        <img :src="screenWidth > 600 ? require('@/assets/image00001.jpeg') : require('@/assets/image00003.jpeg')" style="width: 100%;">
+        <img :src="require('@/assets/image00003.jpeg')" style="width: 100%;">
+      </div>
+      <div style="position: relative;" v-if="screenWidth < 600">
+        <img :src="require('@/assets/image00001.jpeg')" style="width: 100%;">
+      </div>
+      <div style="position: relative;" v-if="screenWidth < 600">
+        <img :src="require('@/assets/image00005.jpeg')" style="width: 100%;">
       </div>
     </div>
+
     <div class="container mt-4">
       <div class="row m-0">
         <div :class="screenWidth > 600 ? 'col-8 offset-2' : 'col-12 p-0'">

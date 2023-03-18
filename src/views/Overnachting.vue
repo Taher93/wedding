@@ -7,6 +7,9 @@
       <div style="position: relative;" v-if="screenWidth < 600">
         <img :src="screenWidth > 600 ? '' : require('@/assets/image00003.jpeg')" style="width: 100%;">
       </div>
+      <div style="position: relative;" v-if="screenWidth < 600">
+        <img :src="require('@/assets/watchring.jpeg')" style="width: 100%;">
+      </div>
     </div>
     <div class="container mt-4">
       <div class="row m-0">
@@ -21,10 +24,10 @@
             Maak je ook geen zorgen over vervoer naar de trouwlocatie. Er rijdt een bus heen en weer naar Maasland voor alle gasten die blijven overnachten.
           </div>
           <div class="mt-3">
-            Klik <a href="https://www.hoteldelft.com/">hier</a> voor enkele sfeerimpressies van het hotel: <a href="https://www.hoteldelft.com/">hoteldelft.com</a>
+            <a href="https://www.hoteldelft.com/">Klik hier voor enkele sfeerimpressies van het hotel: hoteldelft.com</a>
           </div>
           <div class="mt-3">
-            Ga naar de pagina <a href="#/handigelinks">Handige informatie</a> om door te geven of je wilt blijven overnachten.
+            <a href="#/handigelinks">Ga naar de pagina Handige informatie om door te geven of je wilt blijven overnachten.</a>
           </div>
         </div>
         <div class="col-md-12">

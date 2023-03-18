@@ -20,7 +20,7 @@
           </div>
 
           <div class="d-flex justify-content-center" style="font-family: 'QuattrocentoSans'; text-align:center; margin-top: 40px;" >
-            We willen jullie vriendelijk verzoeken te kleden in één van onderstaande kleuren.
+            We willen jullie vriendelijk verzoeken te kleden in (één van) onderstaande kleuren.
           </div>
         </div>
         <div class="col-12">
@@ -39,7 +39,7 @@
               <div class="d-flex justify-content-center">Tarwe</div>
             </div>
             <div>
-              <button class="buttonStyle" style="background: #bdedb5; margin-left: 40px;"></button>
+              <button class="buttonStyle" style="background: #9bcd9b; margin-left: 40px;"></button>
               <div>Licht (natuur) groen</div>
             </div>
             <div>
@@ -69,7 +69,7 @@
               <div class="d-flex justify-content-center">Licht (vacht) bruin</div>
             </div>
             <div>
-              <button class="buttonStyle" style="background: #bdedb5; margin-left:40px;"></button>
+              <button class="buttonStyle" style="background: #9bcd9b; margin-left:45px;"></button>
               <div>Licht (natuur) groen</div>
             </div>
           </div>
