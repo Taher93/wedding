@@ -5,7 +5,7 @@
         <img :src="screenWidth > 600 ? require('@/assets/lolz.jpg') : require('@/assets/lolz.jpg')" style="width: 100%;">
       </div>
       <div style="position: relative;" v-if="screenWidth < 600">
-        <img :src="screenWidth > 600 ? '' : require('@/assets/image00003.jpeg')" style="width: 100%;">
+        <img :src="screenWidth > 600 ? '' : require('@/assets/proposee.png')" style="width: 100%;">
       </div>
       <div style="position: relative;" v-if="screenWidth < 600">
         <img :src="require('@/assets/watchring.jpeg')" style="width: 100%;">

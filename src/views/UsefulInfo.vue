@@ -7,7 +7,7 @@
       <div style="position: relative;" v-if="screenWidth < 600">
         <img :src="require('@/assets/hmmmmm.jpg')" style="width: 100%;">
       </div>
-      <div style="position: relative;" v-if="screenWidth < 600 && hotel">
+      <div style="position: relative;" v-if="screenWidth < 600 && (hotel || hotel === false)">
         <img :src="require('@/assets/kiss.jpg')" style="width: 100%;">
       </div>
     </div>
